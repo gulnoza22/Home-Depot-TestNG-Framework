@@ -1,0 +1,37 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<!--The root tag of this file is <suit>,suit tag can contain one or more 
+	<test> tags, test tag can contain one or more <classes> tags,classes tag 
+	can contain one or more <method> tags -->
+<suite name="Product Search Automation" verbose="5">
+
+	<test name="Product Search Tests">
+		<classes>
+			<!--running tests by class name -->
+			<class name="com.hd.tests.productsearch.ProductSearchTest">
+				<methods>
+					<!-- running (including) specific methods test in the class -->
+					<include name="positiveSearchTest"></include>
+
+					<!--don't run (excluding) specific methods test in the class -->
+					<exclude name="negativeSearchTest"></exclude>
+
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test name="CartItem Tests">
+		<classes>
+			<!--running tests by class name -->
+			<class name="com.hd.tests.cartitem.CartItemTest">
+				<methods>
+				
+					<!-- running (including) specific methods test in the class -->
+					<include name="cartItem"></include>
+					
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+</suite>

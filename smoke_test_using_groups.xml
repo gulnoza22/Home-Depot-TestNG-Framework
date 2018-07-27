@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<!--if you give number 5 to verbose it will print 5 more information, its helpful when you do debugging -->
+<suite name="Smoke groups tests" verbose="2">
+	<test name="Home Depot groups tests">
+	<!--groups will execute the groups which will execute the test methods which are defined with groups as "smoke" -->
+		<groups>
+			<run>
+			<!--we are printing certain group methods from the certain classes by labeling them "smoke-->
+				<include name="smoke"></include>
+			</run>
+		</groups>
+		<classes>
+		<!--we give our class path here-->
+		<class name="com.hd.tests.productsearch.ProductSearchTest"></class>
+		<class name="com.hd.tests.cartitem.CartItemTest"></class>
+		
+		</classes>
+	</test>
+</suite>

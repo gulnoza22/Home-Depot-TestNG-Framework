@@ -1,0 +1,20 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name=" Home Depot Automation Tests" verbose="2" parallel="tests" thread-count="2">
+
+	<test name="ProductSearch tests ">
+           <!--running multiple tests at the same time in parallel inside 2 packages-->
+		<packages>
+			<package name="com.hd.tests.productsearch"></package>
+		</packages>
+		
+	</test>
+
+	<test name="CartItem tests">
+
+		<packages>
+			<package name="com.hd.tests.cartitem"></package>
+        </packages>
+        
+	</test>
+
+</suite>

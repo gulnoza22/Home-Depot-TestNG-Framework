@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<!--printing information in console -->
+<suite name="Smoke tests" verbose="2">
+	
+	<!--running smoke tests every morning to check if application is up and running only -->
+	<test name="ProductSearch smoke tests">
+		<packages>
+			<!--running all the tests inside specific packages -->
+			<package name="com.hd.tests.productsearch"></package>
+		</packages>
+	</test>
+	
+	<test name="CartItem smoke tests">
+		<packages>
+			<!--running all the tests inside specific packages -->
+			<package name="com.hd.tests.cartitem"></package>
+		</packages>
+	</test>
+	
+	
+</suite>
